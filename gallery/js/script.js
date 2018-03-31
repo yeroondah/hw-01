@@ -10,29 +10,25 @@ const photoCollection = [
   'i/IAC.jpg',
   'i/new-museum.jpg'
 ];
+
 let index = 0;
 
-window.onload = function() {
-	img.src = photoCollection[0];
-	index++;
-}
+img.src = photoCollection[index]
 
 next.onclick = function() {
-	img.src = photoCollection[index];
 	index++;
-
 	if(index >= photoCollection.length) {
 		index = 0;
 	}
+	img.src = photoCollection[index];
 }
 
 prev.onclick = function() {
-	img.src = photoCollection[index];
 	index--;
-
 	if(index < 0) {
 		index = photoCollection.length - 1;
 	}
+	img.src = photoCollection[index];
 }
 
 
